@@ -1,3 +1,8 @@
+<div>
+    <button type="button" class="btn btn-primary" [disabled] = "!allowNewServer" (click) = "onClick()">Primary</button>
+    {{state}}
+<input  (input) = "updateDOM($event)" >
+</div>
 
 <div>
     <p>Inside servers</p>
@@ -5,9 +10,6 @@
         <li><app-server></app-server></li>
         <li><app-server></app-server></li>
         <li><app-server></app-server></li>
-        <li><app-server></app-server></li>
-        <li><app-server></app-server></li>
-        <li><app-server></app-server></li>
-        <li><app-server></app-server></li>
+        <li>{{textInputed}}</li>
     </ul>
 </div>

@@ -6,5 +6,11 @@ import { Component } from "@angular/core";
 })
 
 export class ServerComponent{
+    serverId: number = 10;
+    serverStat: string = 'offline'
 
+    getProxyNumber(){
+        let proxyNum = 100
+        return --proxyNum
+    }
 }
