@@ -1,7 +1,22 @@
 <div>
     <button type="button" class="btn btn-primary" [disabled] = "!allowNewServer" (click) = "onClick()">Primary</button>
-    {{state}}
-<input  (input) = "updateDOM($event)" >
+    {{state}}<br>
+    {{serverNameInputed}}
+
+    <hr>
+
+    <div class="oneWayDataBinding">
+        <p>One way data binding:</p>
+        <input  (input) = "updateDOM($event)" >
+        <hr>
+    </div>
+
+    <div class="twoWayDataBinding">
+        <p>Two way data binding:</p>
+        <input [(ngModel)]= "textInputed" >
+        <hr>
+    </div>
+
 </div>
 
 <div>

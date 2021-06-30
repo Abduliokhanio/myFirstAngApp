@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
   boolNewServer = false
   state = "State : null"
   textInputed = ""
+  serverNameInputed = "N/a"
 
   constructor() { 
 
@@ -30,11 +31,13 @@ export class ServersComponent implements OnInit {
       case true:
         this.boolNewServer = false
         this.state = "State : false"
+        this.serverNameInputed = 'The Name is ' + this.textInputed
         break
 
       case false:
         this.boolNewServer = true
         this.state = "State : true"
+        this.serverNameInputed = 'The Name is ' + this.textInputed
         break
 
     }
