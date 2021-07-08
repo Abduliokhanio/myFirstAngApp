@@ -13,6 +13,10 @@ export class ServersComponent implements OnInit {
   textInputed = ""
   serverNameInputed = "N/a"
 
+  servers = ["server1", "server2", "server3"]
+
+  state2 = false
+
   constructor() { 
 
     setTimeout(()=>{
@@ -44,8 +48,24 @@ export class ServersComponent implements OnInit {
 
   }
 
+  onClick2(){
+    switch(this.state2){
+      case true:
+        this.state2 = false
+        break
+      case false:
+        this.state2 = true
+        break
+    }
+     
+  }
+
   updateDOM(event: any){
     this.textInputed = event.srcElement.value
+  }
+
+  onCreate(){
+    this.servers.push(this.textInputed)
   }
 
 }

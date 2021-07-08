@@ -1,1 +1,1 @@
-<p>Server ID: {{ serverId }} -> proxy# {{getProxyNumber()}} -> {{serverStat}} </p>
+<p [ngStyle] = "{backgroundColor: getColor()}" [ngClass] = "{online: serverStat ==='online'}" >Server ID: {{ serverId }} -> proxy# {{getProxyNumber()}} -> {{serverStat}} </p>

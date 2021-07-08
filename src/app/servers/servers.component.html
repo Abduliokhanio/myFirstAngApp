@@ -1,5 +1,17 @@
 <div>
+    <button type="button" class="btn btn-info" (click) = "onClick2()">Primary</button>
+    <p *ngIf = "state2; else notClicked2"> state : {{state2}} </p>
+    <ng-template #notClicked2>
+        <p > state : {{state2}} </p>
+    </ng-template>
+
     <button type="button" class="btn btn-primary" [disabled] = "!allowNewServer" (click) = "onClick()">Primary</button>
+    {{state}}<br>
+    {{serverNameInputed}}
+
+    <hr>
+
+    <button type="button" class="btn btn-danger" (click) = "onCreate()">Primary</button>
     {{state}}<br>
     {{serverNameInputed}}
 
@@ -22,9 +34,7 @@
 <div>
     <p>Inside servers</p>
     <ul type = "square">
-        <li><app-server></app-server></li>
-        <li><app-server></app-server></li>
-        <li><app-server></app-server></li>
+        <li><app-server *ngFor = "let server of servers"></app-server></li>
         <li>{{textInputed}}</li>
     </ul>
 </div>
